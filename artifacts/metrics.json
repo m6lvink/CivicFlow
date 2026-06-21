@@ -1,0 +1,106 @@
+{
+  "stage_a_auc": 0.9509774692644827,
+  "stage_a_ap": 0.9567920685997371,
+  "stage_a_auc_route_ablated": null,
+  "stage_b_mae": 85.23408497522874,
+  "stage_b_median_ae": 58.049606323242216,
+  "stage_b_pred_bias_days": -52.064509129682904,
+  "stage_b_baselines": {
+    "const_mean_value": 128.92330984859842,
+    "const_mean_mae": 86.3562374375315,
+    "const_median_value": 54.000000000000014,
+    "const_median_mae": 111.16711856051269,
+    "best_constant_mae": 86.3562374375315,
+    "model_beats_best_constant": true
+  },
+  "stage_b_mae_by_year": {
+    "2024": 90.7320081024994,
+    "2025": 45.48845003487856
+  },
+  "stage_a_top_features": [
+    {
+      "feature": "alteration",
+      "importance": 0.4318
+    },
+    {
+      "feature": "demolition",
+      "importance": 0.0937
+    },
+    {
+      "feature": "solar",
+      "importance": 0.0903
+    },
+    {
+      "feature": "commercialresidential",
+      "importance": 0.0872
+    },
+    {
+      "feature": "newbuilding",
+      "importance": 0.0697
+    },
+    {
+      "feature": "addition",
+      "importance": 0.0519
+    },
+    {
+      "feature": "estimatedvalueofwork",
+      "importance": 0.0397
+    },
+    {
+      "feature": "retainingwall",
+      "importance": 0.0361
+    },
+    {
+      "feature": "electricalwork",
+      "importance": 0.026
+    },
+    {
+      "feature": "fence",
+      "importance": 0.0158
+    }
+  ],
+  "stage_b_top_features": [
+    {
+      "feature": "solar",
+      "importance": 0.1359
+    },
+    {
+      "feature": "solarvpinstallation",
+      "importance": 0.1353
+    },
+    {
+      "feature": "estimatedvalueofwork",
+      "importance": 0.1152
+    },
+    {
+      "feature": "alteration",
+      "importance": 0.1136
+    },
+    {
+      "feature": "commercialresidential",
+      "importance": 0.1089
+    },
+    {
+      "feature": "demolition",
+      "importance": 0.0505
+    },
+    {
+      "feature": "repair",
+      "importance": 0.044
+    },
+    {
+      "feature": "newbuilding",
+      "importance": 0.0407
+    },
+    {
+      "feature": "pool",
+      "importance": 0.0386
+    },
+    {
+      "feature": "accessorydwellingunitadu",
+      "importance": 0.0347
+    }
+  ],
+  "n_test": 15511,
+  "n_review_test": 4057
+}

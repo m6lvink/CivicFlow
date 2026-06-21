@@ -1,0 +1,15 @@
+.*
+__pycache__/
+*.py[cod]
+*.md
+data/
+frontend/
+tests/
+example-permits/
+scripts/
+artifacts/*
+!artifacts/stage_a_classifier.joblib
+!artifacts/stage_b_regressor.joblib
+!artifacts/encoders.joblib
+!artifacts/metrics.json
+!artifacts/model_card.json

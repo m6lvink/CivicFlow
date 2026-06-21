@@ -1,0 +1,61 @@
+services:
+  - type: pserv
+    name: civicflow-api
+    runtime: docker
+    plan: starter
+    numInstances: 1
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    envVars:
+      - key: PORT
+        value: 8000
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: OPENAI_BASE_URL
+        sync: false
+      - key: OPENAI_MODEL
+        value: Qwen/Qwen2.5-VL-7B-Instruct-AWQ
+      - key: VISION_MAX_PAGES
+        value: 10
+      - key: CIVICFLOW_API_KEYS
+        generateValue: true
+      - key: CIVICFLOW_CORS_ORIGINS
+        value: ""
+      - key: CIVICFLOW_ALLOWED_HOSTS
+        fromService:
+          type: pserv
+          name: civicflow-api
+          property: host
+      - key: CIVICFLOW_RATE_LIMIT_PER_MIN
+        value: 60
+      - key: CIVICFLOW_OPENAI_DAILY_CALLS
+        value: 50
+      - key: CIVICFLOW_MAX_PLAN_FILES
+        value: 4
+      - key: CIVICFLOW_OPENAI_TIMEOUT
+        value: 60
+
+  - type: web
+    name: civicflow-web
+    runtime: node
+    plan: free
+    numInstances: 1
+    rootDir: frontend
+    buildCommand: npm ci && npm run build
+    startCommand: npm run start -- --hostname 0.0.0.0 --port $PORT
+    healthCheckPath: /login
+    envVars:
+      - key: API_BASE_URL
+        fromService:
+          type: pserv
+          name: civicflow-api
+          property: hostport
+      - key: CIVICFLOW_API_KEY
+        fromService:
+          type: pserv
+          name: civicflow-api
+          envVarKey: CIVICFLOW_API_KEYS
+      - key: CIVICFLOW_SITE_PASSWORD
+        sync: false
+      - key: CIVICFLOW_SESSION_SECRET
+        generateValue: true

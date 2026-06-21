@@ -1,0 +1,17 @@
+# Exact versions for reproducible installs; see requirements.txt for the ranges
+pandas==2.3.3
+pyarrow==22.0.0
+scikit-learn==1.7.2
+xgboost==3.2.0
+joblib==1.5.2
+typer==0.21.1
+rich==14.2.0
+python-dotenv==1.2.1
+openai==2.14.0
+# pdf2image pinned to its floor; the container also installs poppler
+pdf2image==1.17.0
+Pillow==11.3.0
+fastapi==0.129.0
+uvicorn[standard]==0.41.0
+python-multipart==0.0.22
+pytest==8.3.4

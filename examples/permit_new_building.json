@@ -1,0 +1,21 @@
+{
+  "commercialresidential": "Residential",
+  "buildingpermittype": "1 - New",
+  "proposeduse": "Single Family Dwelling",
+  "estimatedvalueofwork": 450000,
+  "newbuilding": true,
+  "addition": false,
+  "alteration": false,
+  "demolition": false,
+  "solar": false,
+  "electricalwork": true,
+  "plumbingwork": true,
+  "pool": false,
+  "fence": false,
+  "ohana": false,
+  "accessorydwellingunitadu": false,
+  "jobaddress": "99-200 Aiea Heights Dr Aiea / Pearl City 96701",
+  "joblocation": "Pearl City 96701",
+  "planmaker": "Blueprint Architecture Inc",
+  "applicant": "Robert Tanaka"
+}

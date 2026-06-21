@@ -1,0 +1,31 @@
+# Large data files
+data/
+artifacts/*
+!artifacts/stage_a_classifier.joblib
+!artifacts/stage_b_regressor.joblib
+!artifacts/encoders.joblib
+!artifacts/metrics.json
+!artifacts/model_card.json
+
+# Secrets
+.env
+.env*.local
+frontend/.env*.local
+
+# Frontend build artifacts
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.venv/
+venv/
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+*.log

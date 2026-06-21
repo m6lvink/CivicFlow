@@ -1,0 +1,22 @@
+{
+  "commercialresidential": "Residential",
+  "buildingpermittype": "4 - Addition, alteration or repair (no change in units)",
+  "proposeduse": "Single Family Dwelling",
+  "estimatedvalueofwork": 25000,
+  "solar": true,
+  "solarvpinstallation": true,
+  "electricalwork": true,
+  "newbuilding": false,
+  "addition": false,
+  "alteration": true,
+  "demolition": false,
+  "pool": false,
+  "fence": false,
+  "plumbingwork": false,
+  "ohana": false,
+  "accessorydwellingunitadu": false,
+  "jobaddress": "123 Kamehameha Hwy Honolulu / Kaneohe 96744",
+  "joblocation": "Kaneohe 96744",
+  "planmaker": "Solar Pro Designs LLC",
+  "applicant": "Jane Smith"
+}
