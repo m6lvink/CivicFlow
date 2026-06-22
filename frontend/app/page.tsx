@@ -105,6 +105,7 @@ export default function Home() {
         setFormOpen(true);
         setSkipExtract(true);
         setExtracting(false);
+        await runForecastAndCheck(cleaned(merged), plans);
         return;
       } catch (e) {
         if (e instanceof ApiError && e.status === 503) {
