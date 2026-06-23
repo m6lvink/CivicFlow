@@ -49,8 +49,8 @@ async def lifespan(app: FastAPI):
         app.state.encoders = encoders
         app.state.models_loaded = True
         logger.info("CivicFlow models loaded successfully.")
-    except FileNotFoundError as exc:
-        logger.warning("Models not found at startup: %s", exc)
+    except Exception as exc:
+        logger.warning("Models could not be loaded at startup: %s", exc)
         app.state.clf = None
         app.state.reg = None
         app.state.encoders = None
