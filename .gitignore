@@ -1,0 +1,31 @@
+# Large data files
+data/
+models/*
+!models/stage_a_classifier.joblib
+!models/stage_b_regressor.joblib
+!models/encoders.joblib
+!models/metrics.json
+!models/model_card.json
+
+# Secrets
+.env
+.env*.local
+frontend/.env*.local
+
+# Frontend build output
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.venv/
+venv/
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+*.log
